@@ -34,12 +34,44 @@
 
   <!-- HERO -->
   <section class="hero wrap">
-    <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
-    <div class="hero-text">
-      <div class="hero-avatar">
-        <img src="profile.jpg" alt="Waled Saied" onerror="this.parentElement.classList.add('img-fallback')" />
-        <span class="avatar-fallback">WS</span>
+    <div class="hero-media">
+      <div class="hero-photo">
+        <img src="images/profile.jpg" alt="Waled Saied" onerror="this.closest('.hero-photo').classList.add('img-fallback')" />
+        <div class="hero-photo-fallback">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="10" width="40" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="25" r="8" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="25" r="3" fill="currentColor"/>
+            <path d="M17 10L19.5 6H28.5L31 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>Add your photo at<br><code>images/profile.jpg</code></p>
+        </div>
       </div>
+
+      <div class="hero-visual">
+        <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+        <div class="loss-card">
+          <div class="loss-card-head">
+            <span class="loss-dot"></span>
+            <span>training_log.py</span>
+          </div>
+          <svg class="loss-chart" viewBox="0 0 320 160" preserveAspectRatio="none" fill="none">
+            <line x1="0" y1="30" x2="320" y2="30" class="grid-line"/>
+            <line x1="0" y1="70" x2="320" y2="70" class="grid-line"/>
+            <line x1="0" y1="110" x2="320" y2="110" class="grid-line"/>
+            <line x1="0" y1="150" x2="320" y2="150" class="grid-line"/>
+            <path class="loss-path" d="M0,20 C 40,55 60,95 90,105 C 120,115 140,100 170,120 C 200,138 220,128 250,140 C 275,149 300,148 320,150" />
+            <path class="acc-path" d="M0,150 C 40,120 60,90 90,75 C 120,60 140,68 170,45 C 200,28 220,35 250,20 C 275,12 300,14 320,10" />
+          </svg>
+          <div class="loss-card-legend">
+            <span><i class="dot loss"></i> loss ↓ 0.041</span>
+            <span><i class="dot acc"></i> val_acc ↑ 97.8%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-text">
       <p class="eyebrow">AI ENGINEER &nbsp;·&nbsp; DATA SCIENTIST &nbsp;·&nbsp; AI INSTRUCTOR</p>
       <h1>Turning raw data into<br>models that <span class="accent-underline">learn</span>.</h1>
       <p class="lede">I'm Waled Saied. I design and ship practical AI systems across Machine Learning, Deep Learning, NLP, Computer Vision and Generative AI — then teach others to build them too.</p>
@@ -50,27 +82,6 @@
       <div class="hero-links">
         <a href="https://github.com/WaledGoba220" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="loss-card">
-        <div class="loss-card-head">
-          <span class="loss-dot"></span>
-          <span>training_log.py</span>
-        </div>
-        <svg class="loss-chart" viewBox="0 0 320 160" fill="none">
-          <line x1="0" y1="30" x2="320" y2="30" class="grid-line"/>
-          <line x1="0" y1="70" x2="320" y2="70" class="grid-line"/>
-          <line x1="0" y1="110" x2="320" y2="110" class="grid-line"/>
-          <line x1="0" y1="150" x2="320" y2="150" class="grid-line"/>
-          <path class="loss-path" d="M0,20 C 40,55 60,95 90,105 C 120,115 140,100 170,120 C 200,138 220,128 250,140 C 275,149 300,148 320,150" />
-          <path class="acc-path" d="M0,150 C 40,120 60,90 90,75 C 120,60 140,68 170,45 C 200,28 220,35 250,20 C 275,12 300,14 320,10" />
-        </svg>
-        <div class="loss-card-legend">
-          <span><i class="dot loss"></i> loss ↓ 0.041</span>
-          <span><i class="dot acc"></i> val_acc ↑ 97.8%</span>
-        </div>
       </div>
     </div>
   </section>
@@ -103,60 +114,60 @@
       <h2>Where the work has happened.</h2>
     </div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Scientist</h3>
-          <span class="timeline-date">Aug 2024 — Present</span>
+    <div class="exp-grid">
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>Megamind IT Solutions</h3>
+          <span class="exp-date">2024 — Present</span>
         </div>
-        <p class="timeline-company">Megamind IT Solutions · Egypt</p>
-        <p class="timeline-desc">Built ML models on multi-source healthcare data (EHR, claims, wearables) that lifted diagnostic accuracy by 22% and cut patient readmissions by 15% across three hospital networks, plus KPI dashboards that improved quality scores by 25%.</p>
-      </div>
+        <p class="exp-role">Data Scientist</p>
+        <p class="exp-desc">Healthcare ML models and KPI dashboards used across three hospital networks.</p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Scientist Instructor</h3>
-          <span class="timeline-date">Jul 2025 — Present</span>
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>IT Sharks</h3>
+          <span class="exp-date">2025 — Present</span>
         </div>
-        <p class="timeline-company">IT Sharks · Egypt</p>
-        <p class="timeline-desc">Designed a hands-on data science curriculum bridging theory and real industry projects, and mentored aspiring data scientists through preprocessing, EDA, and predictive modeling.</p>
-      </div>
+        <p class="exp-role">Data Scientist Instructor</p>
+        <p class="exp-desc">Built and taught a hands-on data science curriculum for new learners.</p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Scientist Instructor</h3>
-          <span class="timeline-date">Dec 2025 — Present</span>
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>Instant Software Solutions</h3>
+          <span class="exp-date">2025 — Present</span>
         </div>
-        <p class="timeline-company">Instant Software Solutions · Egypt</p>
-        <p class="timeline-desc">Teaching core data science and machine learning concepts to a new cohort of learners, from statistics foundations through to deployed models.</p>
-      </div>
+        <p class="exp-role">Data Scientist Instructor</p>
+        <p class="exp-desc">Teaching core data science and machine learning concepts to a new cohort.</p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Analyst</h3>
-          <span class="timeline-date">May 2023 — Feb 2024</span>
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>Key2Soft</h3>
+          <span class="exp-date">2023 — 2024</span>
         </div>
-        <p class="timeline-company">Key2Soft · Egypt</p>
-        <p class="timeline-desc">Built real-time dashboards and anomaly-detection systems for $50M+ daily transactions, reaching 92% fraud-detection accuracy and cutting incident response time by 75%.</p>
-      </div>
+        <p class="exp-role">Data Analyst</p>
+        <p class="exp-desc">Real-time dashboards and fraud-detection systems for high-volume transactions.</p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Scientist</h3>
-          <span class="timeline-date">Sep 2022 — Jul 2023</span>
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>GOBA</h3>
+          <span class="exp-date">2022 — 2023</span>
         </div>
-        <p class="timeline-company">GOBA · Self-Employed</p>
-        <p class="timeline-desc">Engineered CNN, RNN and Transformer models that automated business processes, cutting manual work by 35% while holding 99% accuracy in production.</p>
-      </div>
+        <p class="exp-role">Data Scientist · Self-Employed</p>
+        <p class="exp-desc">Deep learning models automating business processes in production.</p>
+      </article>
 
-      <div class="timeline-item">
-        <div class="timeline-top">
-          <h3>Data Scientist</h3>
-          <span class="timeline-date">Oct 2022 — May 2023</span>
+      <article class="exp-card">
+        <div class="exp-card-top">
+          <h3>Mafhoum</h3>
+          <span class="exp-date">2022 — 2023</span>
         </div>
-        <p class="timeline-company">Mafhoum · Alexandria</p>
-        <p class="timeline-desc">Deployed reinforcement-learning and computer-vision automation across supply chain operations, improving delivery accuracy by 42% over 200+ distribution centers.</p>
-      </div>
+        <p class="exp-role">Data Scientist</p>
+        <p class="exp-desc">AI-driven automation across supply chain operations in Alexandria.</p>
+      </article>
     </div>
   </section>
 
