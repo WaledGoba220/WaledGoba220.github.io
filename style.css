@@ -305,13 +305,27 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 
 /* Skills */
 .skills-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:32px; }
-.skill-group h3{ font-size:1.02rem; margin-bottom:16px; display:flex; align-items:center; gap:10px; }
+
+/* ضبط عنوان المهارة والأيقونة بجانبه فوراً مع التحكم المطلق بالحجم */
+.skill-group h3{ 
+  font-size: 1.05rem; 
+  margin-bottom: 16px; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
 .skill-icon{ 
-  width: 20px; 
-  height: 20px; 
+  width: 20px !important; 
+  height: 20px !important; 
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   color: var(--accent); 
   flex-shrink: 0;
+  display: inline-block;
 }
+
 .tag-list{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
 .tag-list li{
   font-family: var(--font-mono); font-size:0.82rem;
@@ -338,27 +352,43 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 .project-card h3{ font-size:1.15rem; }
 .project-card p{ color: var(--ink-soft); font-size:0.95rem; margin:0; flex-grow:1; }
 
-/* Contact */
+/* Contact - مفروض وموسع بشكل متناسق */
 .contact-section{ text-align:left; }
-.contact-lede{ margin-bottom:32px; }
+.contact-lede{ margin-bottom:36px; }
 .contact-links{ 
-  display:flex; 
-  gap:12px; 
-  flex-wrap:wrap; 
-  align-items:center; 
+  display: flex; 
+  gap: 16px; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: flex-start;
+  width: 100%;
 }
 .contact-btn{
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 12px 20px;
-  font-size: 0.9rem;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  transition: all 0.2s ease;
+}
+.contact-btn:hover{
+  background: var(--bg);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52, 84, 209, 0.12);
 }
 .contact-icon{
-  width: 18px;
-  height: 18px;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px;
+  min-height: 18px;
   color: var(--ink);
-  transition: color 0.15s ease;
+  transition: color 0.2s ease;
   flex-shrink: 0;
 }
 .contact-btn:hover .contact-icon{
@@ -390,7 +420,7 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
   .header-row{ height:64px; }
   .hero-stats{ grid-template-columns: 1fr 1fr; }
   .contact-links{ flex-direction: column; align-items: stretch; }
-  .contact-btn{ justify-content: center; }
+  .contact-btn{ justify-content: center; width: 100%; }
 }
 
 /* Focus visibility */
