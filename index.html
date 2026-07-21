@@ -3,34 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walid Saeed — AI Engineer & Data Scientist</title>
-  <meta name="description" content="Portfolio of Walid Saeed — AI Engineer, Data Scientist, and AI Instructor." />
-
+  <title>Walid Saeed — Portfolio</title>
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Stylesheet -->
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Background Grid Effect -->
-  <div class="grid-backdrop" aria-hidden="true"></div>
+  <div class="grid-backdrop"></div>
 
-  <!-- Header / Navigation -->
+  <!-- ---------- Header ---------- -->
   <header class="site-header">
     <div class="wrap header-row">
-      <a href="#hero" class="brand">Walid Saeed<span class="brand-dot">.</span></a>
+      <a href="#" class="brand">Walid<span class="brand-dot">.</span></a>
       
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
-      </button>
-
       <nav class="nav" id="navMenu">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -38,253 +33,267 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero wrap">
-      
-      <!-- Media Grid (Photo + Dynamic Graphic) -->
-      <div class="hero-media">
-        <div class="hero-photo" id="heroPhoto">
-          <img src="profile.jpg" alt="Walid Saeed" id="profileImg" />
-          <div class="hero-photo-fallback" id="photoFallback">
-            <i class="fa-solid fa-user"></i>
-            <p>Add <code>profile.jpg</code> to display photo</p>
-          </div>
+  <!-- ---------- Hero Section ---------- -->
+  <section class="hero wrap">
+    <div class="hero-media">
+      <!-- Profile Photo Container -->
+      <div class="hero-photo">
+        <img src="profile.jpg" alt="Walid Saeed" />
+        <div class="hero-photo-fallback">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <p>Add <code>profile.jpg</code> to project root</p>
         </div>
+      </div>
 
-        <div class="hero-visual">
-          <canvas id="neuralCanvas" class="neural-canvas"></canvas>
+      <!-- Hero Visual Card -->
+      <div class="hero-visual">
+        <div class="neural-canvas"></div>
+        <div class="loss-card">
+          <div class="loss-card-head">
+            <span class="loss-dot"></span>
+            <span>model_training.py — Loss & Accuracy</span>
+          </div>
           
-          <div class="loss-card">
-            <div class="loss-card-head">
-              <span class="loss-dot"></span>
-              <span>Model Training Metrics</span>
-            </div>
-            <svg class="loss-chart" viewBox="0 0 320 140" preserveAspectRatio="none">
-              <line x1="0" y1="30" x2="320" y2="30" class="grid-line" />
-              <line x1="0" y1="70" x2="320" y2="70" class="grid-line" />
-              <line x1="0" y1="110" x2="320" y2="110" class="grid-line" />
-              <path class="loss-path" d="M 10 20 Q 80 110, 160 115 T 310 120" />
-              <path class="acc-path" d="M 10 120 Q 80 40, 160 30 T 310 22" />
-            </svg>
-            <div class="loss-card-legend">
-              <span><span class="dot loss"></span> Loss: 0.041</span>
-              <span><span class="dot acc"></span> Accuracy: 98.6%</span>
-            </div>
+          <svg class="loss-chart" viewBox="0 0 300 120">
+            <line x1="0" y1="30" x2="300" y2="30" class="grid-line" />
+            <line x1="0" y1="60" x2="300" y2="60" class="grid-line" />
+            <line x1="0" y1="90" x2="300" y2="90" class="grid-line" />
+            
+            <!-- Loss Curve -->
+            <path d="M 10 20 Q 80 90, 150 98 T 290 105" class="loss-path" />
+            <!-- Accuracy Curve -->
+            <path d="M 10 100 Q 80 40, 150 25 T 290 15" class="acc-path" />
+          </svg>
+
+          <div class="loss-card-legend">
+            <span><span class="dot loss"></span> Loss</span>
+            <span><span class="dot acc"></span> Accuracy</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Main Content: Eyebrow, Title & Intro -->
-      <div class="hero-intro">
-        <p class="eyebrow">AI ENGINEER &nbsp;&middot;&nbsp; DATA SCIENTIST &nbsp;&middot;&nbsp; AI INSTRUCTOR</p>
-        <h1>Turning raw data into <span class="accent-underline">intelligent decisions</span>.</h1>
-        <p class="lede">
-          Data Team Lead & Senior Data Scientist with hands-on experience in machine learning pipelines, enterprise data architecture, and AI instruction.
-        </p>
-        
-        <!-- Social & Quick Links -->
-        <div class="hero-links">
-          <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="mailto:waledgoba220@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-        </div>
+    <!-- Hero Content -->
+    <div class="hero-intro">
+      <span class="eyebrow">Data Scientist & Analytics Specialist</span>
+      <h1>Building intelligent systems with <span class="accent-underline">Data & ML</span>.</h1>
+      <p class="lede">Transforming raw datasets into actionable insights, robust predictive models, and scalable analytical architectures.</p>
+      
+      <div class="hero-links">
+        <a href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
+        <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
       </div>
 
-      <!-- Quick Metrics Bar -->
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-num">5+</span>
+          <span class="stat-num">3+</span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">20+</span>
-          <span class="stat-label">ML & AI Projects</span>
+          <span class="stat-num">15+</span>
+          <span class="stat-label">ML Projects</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">Students Taught</span>
+          <span class="stat-num">99%</span>
+          <span class="stat-label">Pipeline Reliability</span>
         </div>
       </div>
+    </div>
+  </section>
 
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section wrap reveal">
+  <!-- ---------- About Section ---------- -->
+  <section id="about" class="section reveal">
+    <div class="wrap about-grid">
       <div class="section-head">
         <h2>About Me</h2>
       </div>
-      <div class="about-grid">
-        <p class="about-copy">
-          I am a Data Team Lead and Senior Data Scientist specializing in end-to-end machine learning solutions, enterprise data warehousing, and business intelligence platform development.
-        </p>
-        <p class="about-copy">
-          Beyond building predictive models and data architectures, I am passionate about knowledge sharing — mentoring aspiring data professionals through structured courses in machine learning, algorithms, and data analytics.
-        </p>
-      </div>
-    </section>
+      <p class="about-copy">
+        I specialize in Data Analytics and Data Science, designing scalable data pipelines, predictive models, and analytics applications. Passionate about leveraging machine learning algorithms and enterprise database architectures to solve complex real-world business challenges.
+      </p>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section wrap reveal">
+  <!-- ---------- Experience Section ---------- -->
+  <section id="experience" class="section reveal">
+    <div class="wrap">
       <div class="section-head">
         <h2>Experience</h2>
       </div>
       <div class="exp-grid">
-        <article class="exp-card">
+        <div class="exp-card">
           <div class="exp-card-top">
-            <h3>Data Team Lead & Sr. Data Scientist</h3>
-            <span class="exp-date">2023 — Present</span>
+            <h3>Senior Data Scientist</h3>
+            <span class="exp-date">2024 — Present</span>
           </div>
           <p class="exp-role">Megamind</p>
-          <p class="exp-desc">
-            Leading a multi-disciplinary data team, driving ETL pipeline design, machine learning integration, and scalable data warehouse architecture.
-          </p>
-        </article>
+          <p class="exp-desc">Leading data initiatives, building predictive ML models, and optimizing database performance for healthcare and business systems.</p>
+        </div>
 
-        <article class="exp-card">
+        <div class="exp-card">
           <div class="exp-card-top">
-            <h3>AI & Data Science Instructor</h3>
-            <span class="exp-date">2022 — Present</span>
+            <h3>Data Instructor</h3>
+            <span class="exp-date">2023 — Present</span>
           </div>
-          <p class="exp-role">Academy / Professional Training</p>
-          <p class="exp-desc">
-            Designing and delivering hands-on curriculum covering ML algorithms, Python data stack, SQL Server, and deep learning fundamentals.
-          </p>
-        </article>
+          <p class="exp-role">Education & Training</p>
+          <p class="exp-desc">Teaching modern Data Science tracks, including Machine Learning, Python, SQL, and Power BI dashboards.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section wrap reveal">
+  <!-- ---------- Skills Section ---------- -->
+  <section id="skills" class="section reveal">
+    <div class="wrap">
       <div class="section-head">
         <h2>Technical Skills</h2>
       </div>
       <div class="skills-grid">
-        
         <div class="skill-group">
-          <h3><i class="fa-solid fa-brain"></i> Machine Learning & AI</h3>
+          <h3><i class="fa-solid fa-brain"></i> Machine Learning</h3>
           <ul class="tag-list">
             <li>Scikit-Learn</li>
             <li>XGBoost</li>
+            <li>Random Forest</li>
+            <li>SVM</li>
             <li>Keras</li>
-            <li>TensorFlow</li>
-            <li>SVM / Random Forest</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3><i class="fa-solid fa-database"></i> Data & Architecture</h3>
+          <h3><i class="fa-solid fa-database"></i> Data Engineering</h3>
           <ul class="tag-list">
             <li>SQL Server</li>
             <li>ETL Pipelines</li>
-            <li>Star / Snowflake Schema</li>
-            <li>Medallion Architecture</li>
+            <li>Star Schema</li>
             <li>SSAS / SSRS</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3><i class="fa-solid fa-code"></i> Tools & Deployment</h3>
+          <h3><i class="fa-solid fa-chart-pie"></i> Analytics & Tools</h3>
           <ul class="tag-list">
-            <li>Python (Pandas/NumPy)</li>
+            <li>Pandas / NumPy</li>
             <li>Power BI</li>
             <li>Streamlit</li>
-            <li>Git</li>
-            <li>REST APIs</li>
+            <li>Python</li>
           </ul>
         </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section wrap reveal">
+  <!-- ---------- Projects Section ---------- -->
+  <section id="projects" class="section reveal">
+    <div class="wrap">
       <div class="section-head">
-        <h2>Featured Projects</h2>
+        <h2>Selected Projects</h2>
       </div>
       <div class="project-grid">
-
-        <article class="project-card">
+        <!-- Project 1 -->
+        <div class="project-card">
           <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-square-poll-vertical"></i> Business Intelligence</span>
-            <span class="project-year">2025</span>
-          </div>
-          <h3>Intelligent Business Management Platform</h3>
-          <p>End-to-end analytics platform with real-time dashboards and automated ETL workflows.</p>
-          <div class="project-tech">
-            <span>Power BI</span><span class="sep">|</span><span>SQL Server</span><span class="sep">|</span><span>Python</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-hospital"></i> Healthcare AI</span>
-            <span class="project-year">2025</span>
-          </div>
-          <h3>Multi-Branch Healthcare Data Warehouse</h3>
-          <p>Medallion architecture pipeline integrating multi-branch hospital system records.</p>
-          <div class="project-tech">
-            <span>SQL Server</span><span class="sep">|</span><span>SSAS</span><span class="sep">|</span><span>Python</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+            <span class="project-tag"><i class="fa-solid fa-circle-nodes"></i> Predictive ML</span>
             <span class="project-year">2024</span>
           </div>
-          <h3>Predictive Analytics & Model Pipeline</h3>
-          <p>Supervised learning models for churn prediction and customer segmentation.</p>
+          <h3>Healthcare Analytics Pipeline</h3>
+          <p>End-to-end classification system predicting patient outcomes with automated data cleaning and real-time inference.</p>
           <div class="project-tech">
-            <span>Scikit-Learn</span><span class="sep">|</span><span>XGBoost</span><span class="sep">|</span><span>Streamlit</span>
+            <span>Python</span><span class="sep">/</span>
+            <span>XGBoost</span><span class="sep">/</span>
+            <span>SQL Server</span>
           </div>
-        </article>
+        </div>
 
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-chart-line"></i> Dashboard</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>Enterprise BI Portal</h3>
+          <p>Multi-branch reporting warehouse system with automated ETL pipelines and interactive Power BI dashboards.</p>
+          <div class="project-tech">
+            <span>Power BI</span><span class="sep">/</span>
+            <span>SSAS</span><span class="sep">/</span>
+            <span>ETL</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-laptop-code"></i> Web App</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3>Interactive ML Explorer</h3>
+          <p>Streamlit web application allowing users to upload data, train custom ML models, and visualize decision boundaries.</p>
+          <div class="project-tech">
+            <span>Streamlit</span><span class="sep">/</span>
+            <span>Scikit-Learn</span><span class="sep">/</span>
+            <span>Pandas</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section wrap reveal contact-section">
+  <!-- ---------- Contact Section ---------- -->
+  <section id="contact" class="section contact-section reveal">
+    <div class="wrap">
       <div class="section-head">
-        <h2>Get In Touch</h2>
+        <h2>Let's Connect</h2>
       </div>
-      <p class="contact-lede lede">
-        Reach out directly via any of the channels below:
-      </p>
+      <p class="lede contact-lede">Reach out directly via any of the channels below:</p>
 
       <div class="contact-links-row">
-        <a href="mailto:waledgoba220@gmail.com" class="btn contact-btn">
+        <!-- Gmail -->
+        <a href="mailto:waledgoba220@gmail.com" class="contact-btn">
           <i class="fa-solid fa-envelope btn-icon"></i>
-          <span>waledgoba220@gmail.com</span>
+          <span>Gmail</span>
         </a>
-        <a href="https://wa.me/201113506145" target="_blank" rel="noopener" class="btn contact-btn">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201113506145" target="_blank" rel="noopener noreferrer" class="contact-btn">
           <i class="fa-brands fa-whatsapp btn-icon"></i>
-          <span>WhatsApp (+20 111 350 6145)</span>
+          <span>WhatsApp</span>
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn contact-btn">
-          <i class="fa-brands fa-linkedin btn-icon"></i>
-          <span>LinkedIn Profile</span>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+          <i class="fa-brands fa-linkedin-in btn-icon"></i>
+          <span>LinkedIn</span>
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener" class="btn contact-btn">
+
+        <!-- GitHub -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
           <i class="fa-brands fa-github btn-icon"></i>
-          <span>GitHub Repositories</span>
+          <span>GitHub</span>
         </a>
-        <a href="https://kaggle.com" target="_blank" rel="noopener" class="btn contact-btn">
+
+        <!-- Kaggle -->
+        <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
           <i class="fa-brands fa-kaggle btn-icon"></i>
-          <span>Kaggle Profile</span>
+          <span>Kaggle</span>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <!-- Footer -->
+  <!-- ---------- Footer ---------- -->
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; 2026 Walid Saeed. Built with clean code & modern web standards.</p>
+      <p>&copy; 2026 Walid Saeed. All rights reserved.</p>
     </div>
   </footer>
 
@@ -293,19 +302,11 @@
     // Mobile Nav Toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', () => {
+    navToggle?.addEventListener('click', () => {
       navMenu.classList.toggle('is-open');
     });
 
-    // Handle Profile Image Fallback
-    const profileImg = document.getElementById('profileImg');
-    const heroPhoto = document.getElementById('heroPhoto');
-    profileImg.onerror = () => {
-      heroPhoto.classList.add('img-fallback');
-    };
-
     // Scroll Reveal Animation
-    const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -314,62 +315,7 @@
       });
     }, { threshold: 0.1 });
 
-    reveals.forEach(el => observer.observe(el));
-
-    // Simple Background Neural Canvas Animation
-    const canvas = document.getElementById('neuralCanvas');
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      let width = canvas.width = canvas.offsetWidth;
-      let height = canvas.height = canvas.offsetHeight;
-
-      window.addEventListener('resize', () => {
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
-      });
-
-      const nodes = Array.from({ length: 18 }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-      }));
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-        
-        nodes.forEach(node => {
-          node.x += node.vx;
-          node.y += node.vy;
-          if (node.x < 0 || node.x > width) node.vx *= -1;
-          if (node.y < 0 || node.y > height) node.vy *= -1;
-
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(52, 84, 209, 0.25)';
-          ctx.fill();
-        });
-
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 90) {
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.strokeStyle = `rgba(52, 84, 209, ${0.12 * (1 - dist / 90)})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    }
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
