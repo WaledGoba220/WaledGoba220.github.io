@@ -1,305 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Waled Saied | Data Scientist</title>
-<meta name="description" content="Waled Saied — AI Engineer, Data Scientist and AI Instructor specializing in Machine Learning, Deep Learning, NLP, Computer Vision and Generative AI." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waled Saied | Senior Data Scientist & AI Engineer</title>
+  <meta name="description" content="Portfolio of Waled Saied — Senior Data Scientist, AI Engineer, and Instructor specializing in Machine Learning, Generative AI, and Healthcare Analytics." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content="Waled Saied | Senior Data Scientist & AI Engineer" />
+  <meta property="og:description" content="Architecting and deploying production AI systems, healthcare predictive models, and enterprise data solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="grid-backdrop" aria-hidden="true"></div>
 
-<div class="grid-backdrop" aria-hidden="true"></div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top">Waled Saied<span class="brand-dot">.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="#top">Waled Saied<span class="brand-dot">.</span></a>
-    <nav class="nav" id="nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+  <main id="top">
 
-<main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero wrap">
+      <div class="hero-media">
+        <div class="hero-photo">
+          <img src="image.jpg" alt="Waled Saied">
+          <div class="hero-photo-fallback"></div>
+        </div>
 
-  <!-- HERO -->
-  <section class="hero wrap">
-    <div class="hero-media">
-      <div class="hero-photo">
-        <img src="image.jpg" alt="Waled Saied">
-        <div class="hero-photo-fallback"></div>
-      </div>
-
-      <div class="hero-visual">
-        <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
-        <div class="loss-card">
-          <div class="loss-card-head">
-            <span class="loss-dot"></span>
-            <span>training_log.py</span>
+        <div class="hero-visual">
+          <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+          <div class="loss-card">
+            <div class="loss-card-head">
+              <span class="loss-dot"></span>
+              <span>training_log.py</span>
+            </div>
+            <svg class="loss-chart" viewBox="0 0 320 160" preserveAspectRatio="none" fill="none">
+              <line x1="0" y1="30" x2="320" y2="30" class="grid-line"/>
+              <line x1="0" y1="70" x2="320" y2="70" class="grid-line"/>
+              <line x1="0" y1="110" x2="320" y2="110" class="grid-line"/>
+              <line x1="0" y1="150" x2="320" y2="150" class="grid-line"/>
+              <path class="loss-path" d="M0,20 C 40,55 60,95 90,105 C 120,115 140,100 170,120 C 200,138 220,128 250,140 C 275,149 300,148 320,150" />
+              <path class="acc-path" d="M0,150 C 40,120 60,90 90,75 C 120,60 140,68 170,45 C 200,28 220,35 250,20 C 275,12 300,14 320,10" />
+            </svg>
+            <div class="loss-card-legend">
+              <span><i class="dot loss"></i> loss ↓ 0.041</span>
+              <span><i class="dot acc"></i> val_acc ↑ 97.8%</span>
+            </div>
           </div>
-          <svg class="loss-chart" viewBox="0 0 320 160" preserveAspectRatio="none" fill="none">
-            <line x1="0" y1="30" x2="320" y2="30" class="grid-line"/>
-            <line x1="0" y1="70" x2="320" y2="70" class="grid-line"/>
-            <line x1="0" y1="110" x2="320" y2="110" class="grid-line"/>
-            <line x1="0" y1="150" x2="320" y2="150" class="grid-line"/>
-            <path class="loss-path" d="M0,20 C 40,55 60,95 90,105 C 120,115 140,100 170,120 C 200,138 220,128 250,140 C 275,149 300,148 320,150" />
-            <path class="acc-path" d="M0,150 C 40,120 60,90 90,75 C 120,60 140,68 170,45 C 200,28 220,35 250,20 C 275,12 300,14 320,10" />
-          </svg>
-          <div class="loss-card-legend">
-            <span><i class="dot loss"></i> loss ↓ 0.041</span>
-            <span><i class="dot acc"></i> val_acc ↑ 97.8%</span>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="eyebrow">AI ENGINEER &nbsp;·&nbsp; DATA SCIENTIST &nbsp;·&nbsp; AI INSTRUCTOR</p>
+        <h1>Turning raw data into<br>models that <span class="accent-underline">learn</span>.</h1>
+        <p class="lede">I'm Waled Saied. I design and ship production-grade AI systems, enterprise data architectures, and Intelligent Agents — then mentor teams and students to build them too.</p>
+        
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Projects</a>
+          <a href="Waled_Saied_CV.pdf" download class="btn btn-secondary"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+          <a href="#contact" class="btn btn-ghost"><i class="fa-regular fa-envelope"></i> Get in Touch</a>
+        </div>
+
+        <div class="hero-links">
+          <a href="https://github.com/WaledGoba220" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn ↗</a>
+          <a href="https://www.kaggle.com/waledsaied" target="_blank" rel="noopener"><i class="fa-brands fa-kaggle"></i> Kaggle ↗</a>
+        </div>
+
+        <!-- QUICK STATS -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">9+</span>
+            <span class="stat-label">Hospital Branches Deployed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Field Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Students Mentored</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <br>
-    <div class="hero-text">
-      <p class="eyebrow">AI ENGINEER &nbsp;·&nbsp; DATA SCIENTIST &nbsp;·&nbsp; AI INSTRUCTOR</p>
-      <h1>Turning raw data into<br>models that <span class="accent-underline">learn</span>.</h1>
-      <p class="lede">I'm Waled Saied. I design and ship practical AI systems across Machine Learning, Deep Learning, NLP, Computer Vision and Generative AI — then teach others to build them too.</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">01 — ABOUT ME</p>
+        <h2>Building practical AI that survives production.</h2>
       </div>
-      <div class="hero-links">
-        <a href="https://github.com/WaledGoba220" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <div class="about-grid">
+        <p class="about-copy">
+          I'm a Data Scientist and AI Team Lead specializing in Machine Learning, Deep Learning, NLP, Computer Vision, and Generative AI. My core focus is translating complex business problems into scalable, reliable data architecture — spanning predictive healthcare pipelines, computer vision systems, and automated RAG-driven AI agents.
+        </p>
+        <p class="about-copy">
+          In addition to engineering, I act as a Data Science Instructor. I believe the true value of AI lies in clarity — empowering organizations, junior engineers, and students to build, audit, and trust machine learning systems end-to-end.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section wrap reveal">
-    <div class="section-head">
-      <p class="eyebrow">01 — ABOUT</p>
-      <h2>Building AI that solves real problems.</h2>
-    </div>
-    <div class="about-grid">
-      <p class="about-copy">
-        I'm a passionate AI Engineer specializing in Machine Learning, Deep Learning, NLP, Computer Vision,
-        and Generative AI — focused on building practical AI solutions that hold up outside a notebook.
-        My work spans predictive healthcare models, computer-vision systems for agriculture, and
-        retrieval-augmented chatbots, backed by solid data engineering and analytics.
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">02 — EXPERIENCE</p>
+        <h2>Where impact meets execution.</h2>
+      </div>
+
+      <div class="exp-grid">
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Megamind IT Solutions</h3>
+            <span class="exp-date">2024 — Present</span>
+          </div>
+          <p class="exp-role">Data Scientist & Team Lead</p>
+          <p class="exp-desc">Architecting and deploying end-to-end ML pipelines & BI analytics across 9+ hospital branches, optimizing clinical triage, part-time doctor workflows, and executive reporting.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>IT Sharks</h3>
+            <span class="exp-date">2025 — Present</span>
+          </div>
+          <p class="exp-role">Data Science Instructor</p>
+          <p class="exp-desc">Designing and leading hands-on curricula in Data Science, Machine Learning models, and Statistical Foundations for emerging data professionals.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Instant Software Solutions</h3>
+            <span class="exp-date">2025 — Present</span>
+          </div>
+          <p class="exp-role">Data Science Instructor</p>
+          <p class="exp-desc">Mentoring cohorts through practical machine learning deployments, Python data stack best practices, and exploratory data analysis.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Key2Soft</h3>
+            <span class="exp-date">2023 — 2024</span>
+          </div>
+          <p class="exp-role">Data Analyst</p>
+          <p class="exp-desc">Engineered real-time transactional dashboards and anomaly/fraud detection pipelines handling high-volume operational metrics.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>GOBA</h3>
+            <span class="exp-date">2022 — 2023</span>
+          </div>
+          <p class="exp-role">Data Scientist · Founder</p>
+          <p class="exp-desc">Developed award-winning Computer Vision and Deep Learning models for medical diagnostics automation, taking 1st place at Techne Drifts.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Mafhoum</h3>
+            <span class="exp-date">2022 — 2023</span>
+          </div>
+          <p class="exp-role">Data Scientist</p>
+          <p class="exp-desc">Streamlined operational supply-chain intelligence through automated predictive modeling and inventory data analytics.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">03 — TECH STACK</p>
+        <h2>Languages, Frameworks & Architecture.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-code"></i> Core Languages</h3>
+          <ul class="tag-list">
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-solid fa-database"></i> SQL</li>
+            <li><i class="fa-solid fa-chart-simple"></i> R</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-brain"></i> ML & Deep Learning</h3>
+          <ul class="tag-list">
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Keras</li>
+            <li>scikit-learn</li>
+            <li>XGBoost</li>
+            <li>SciPy</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-network-wired"></i> Neural Architectures</h3>
+          <ul class="tag-list">
+            <li>CNNs</li>
+            <li>RNNs & LSTMs</li>
+            <li>Transformers</li>
+            <li>RAG & LLM Agents</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-server"></i> Data & BI Architecture</h3>
+          <ul class="tag-list">
+            <li>SQL Server (SSAS/SSRS)</li>
+            <li>Medallion & Star Schema</li>
+            <li>Power BI</li>
+            <li>Streamlit</li>
+            <li>ETL Pipelines</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-square-poll-vertical"></i> Analytics & Math</h3>
+          <ul class="tag-list">
+            <li>Pandas & NumPy</li>
+            <li>Matplotlib & Seaborn</li>
+            <li>Inferential Statistics</li>
+            <li>Linear Algebra</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-globe"></i> Scraping & Automation</h3>
+          <ul class="tag-list">
+            <li>BeautifulSoup</li>
+            <li>Selenium</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">04 — PROJECTS</p>
+        <h2>Featured work & Intelligent Agents.</h2>
+      </div>
+
+      <div class="project-grid">
+        
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-trophy"></i> Award Winning · CV</span>
+            <span class="project-year">Graduation</span>
+          </div>
+          <h3>GOBA — Chest Diagnostics Platform</h3>
+          <p>AI computer vision system identifying complex lung conditions from X-ray imaging. Awarded 1st place at Techne Drifts and selected as a Top-18 Startup at Techne Summit Cairo 2023.</p>
+          <div class="project-tech">
+            <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>CNN</span><span>Streamlit</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/WaledGoba220" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Repository</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-hospital"></i> Healthcare · Automation</span>
+            <span class="project-year">Enterprise</span>
+          </div>
+          <h3>Automated Part-Time Doctor Module</h3>
+          <p>End-to-end module managing physician contracts, scheduling, and dynamic KPI performance tracking. Successfully scaled and deployed across 9+ medical branches.</p>
+          <div class="project-tech">
+            <span>SQL Server</span><span>Power BI</span><span>Python</span><span>ETL</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-robot"></i> Generative AI · RAG</span>
+            <span class="project-year">GenAI</span>
+          </div>
+          <h3>Conversational AI Doctor Agent</h3>
+          <p>Intelligent, empathetic AI agent driven by Retrieval-Augmented Generation (RAG). Interacts with patients using verified clinical knowledge bases to address medical inquiries.</p>
+          <div class="project-tech">
+            <span>LLMs</span><span>RAG</span><span>LangChain</span><span>Python</span><span>Vector DB</span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-heart-pulse"></i> Predictive Analytics</span>
+            <span class="project-year">Healthcare</span>
+          </div>
+          <h3>Emergency Room Triage Optimization</h3>
+          <p>Predictive machine learning pipeline calculating real-time patient risk scores based on vital signs and symptom acuity to prioritize emergency resources.</p>
+          <div class="project-tech">
+            <span>Scikit-Learn</span><span>XGBoost</span><span>Pandas</span><span>Flask</span>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-users-gear"></i> AI HR Analytics</span>
+            <span class="project-year">Enterprise</span>
+          </div>
+          <h3>End-to-End AI HR & Retention Module</h3>
+          <p>Automated HR workflow system leveraging ML algorithms to benchmark salary scales, forecast turnover risk, and optimize talent management lifecycle.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Random Forest</span><span>Power BI</span><span>SQL</span>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-shield-halved"></i> Document Intelligence</span>
+            <span class="project-year">KSA HADAF</span>
+          </div>
+          <h3>Insurance Approval Cycle Agent</h3>
+          <p>Autonomous AI agent integrated with Saudi Arabia's HADAF platform. Parses, verifies, and validates Iqama records, employment contracts, and policies for instant approval.</p>
+          <div class="project-tech">
+            <span>OCR</span><span>NLP</span><span>APIs</span><span>Python Automation</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section wrap reveal contact-section">
+      <div class="section-head">
+        <p class="eyebrow">05 — CONTACT</p>
+        <h2>Let's build something intelligent.</h2>
+      </div>
+      <p class="about-copy contact-lede">
+        Open to AI Engineering initiatives, Enterprise Data Consulting, and Academic/Training collaborations. Drop a direct message or send an email below!
       </p>
-      <p class="about-copy">
-        Beyond building, I teach. As an AI Instructor, I break down complex ML and DL concepts into
-        something learners can actually use — because the best models are the ones other people can
-        understand, trust, and build on.
-      </p>
-    </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section wrap reveal">
-    <div class="section-head">
-      <p class="eyebrow">02 — EXPERIENCE</p>
-      <h2>Where the work has happened.</h2>
-    </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Your Message or Project Details..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
 
-    <div class="exp-grid">
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>Megamind IT Solutions</h3>
-          <span class="exp-date">2024 — Present</span>
+        <div class="contact-links-card">
+          <h3>Direct Channels</h3>
+          <a class="btn btn-ghost contact-btn" href="mailto:waledgoba220@gmail.com"><i class="fa-solid fa-envelope"></i> Email Me Direct</a>
+          <a class="btn btn-ghost contact-btn" href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
+          <a class="btn btn-ghost contact-btn" href="https://github.com/WaledGoba220" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Explore GitHub Repos</a>
         </div>
-        <p class="exp-role">Data Scientist</p>
-        <p class="exp-desc">Healthcare ML models and KPI dashboards used across three hospital networks.</p>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>IT Sharks</h3>
-          <span class="exp-date">2025 — Present</span>
-        </div>
-        <p class="exp-role">Data Scientist Instructor</p>
-        <p class="exp-desc">Built and taught a hands-on data science curriculum for new learners.</p>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>Instant Software Solutions</h3>
-          <span class="exp-date">2025 — Present</span>
-        </div>
-        <p class="exp-role">Data Scientist Instructor</p>
-        <p class="exp-desc">Teaching core data science and machine learning concepts to a new cohort.</p>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>Key2Soft</h3>
-          <span class="exp-date">2023 — 2024</span>
-        </div>
-        <p class="exp-role">Data Analyst</p>
-        <p class="exp-desc">Real-time dashboards and fraud-detection systems for high-volume transactions.</p>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>GOBA</h3>
-          <span class="exp-date">2022 — 2023</span>
-        </div>
-        <p class="exp-role">Data Scientist · Self-Employed</p>
-        <p class="exp-desc">Deep learning models automating business processes in production.</p>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-top">
-          <h3>Mafhoum</h3>
-          <span class="exp-date">2022 — 2023</span>
-        </div>
-        <p class="exp-role">Data Scientist</p>
-        <p class="exp-desc">AI-driven automation across supply chain operations in Alexandria.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section wrap reveal">
-    <div class="section-head">
-      <p class="eyebrow">03 — SKILLS</p>
-      <h2>The stack behind the models.</h2>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <ul class="tag-list">
-          <li>Python</li>
-          <li>SQL</li>
-          <li>R</li>
-        </ul>
       </div>
-      <div class="skill-group">
-        <h3>ML &amp; Deep Learning</h3>
-        <ul class="tag-list">
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>Keras</li>
-          <li>scikit-learn</li>
-          <li>SciPy</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Neural Networks</h3>
-        <ul class="tag-list">
-          <li>CNN</li>
-          <li>RNN / LSTM</li>
-          <li>Transformers</li>
-          <li>Feedforward</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Data Analysis &amp; Viz</h3>
-        <ul class="tag-list">
-          <li>Power BI</li>
-          <li>Pandas</li>
-          <li>NumPy</li>
-          <li>Matplotlib</li>
-          <li>Seaborn</li>
-          <li>Excel</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Foundations</h3>
-        <ul class="tag-list">
-          <li>Statistics</li>
-          <li>Probability</li>
-          <li>Linear Algebra</li>
-          <li>Time Series</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Web Scraping</h3>
-        <ul class="tag-list">
-          <li>BeautifulSoup</li>
-          <li>Selenium</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section wrap reveal">
-    <div class="section-head">
-      <p class="eyebrow">04 — PROJECTS</p>
-      <h2>Selected work.</h2>
-    </div>
+  </main>
 
-    <div class="project-grid">
-      <!-- Project 1: GOBA (Graduation) -->
-      <article class="project-card">
-        <p class="project-tag">Graduation Project · Computer Vision</p>
-        <h3>GOBA</h3>
-        <p>A platform that uses AI to identify serious chest conditions from medical imaging, supporting clinicians in diagnosis. First place at Techne Drifts, and a top-18 startup at Techne Summit Cairo 2023.</p>
-      </article>
+  <footer class="site-footer wrap">
+    <p>© 2026 Waled Saied. Designed & Built with Precision.</p>
+  </footer>
 
-      <!-- Project 2: Part-Time Doctor Module -->
-      <article class="project-card">
-        <p class="project-tag">Healthcare · Process Automation</p>
-        <h3>Automated Part-Time Doctor Module</h3>
-        <p>Designed and implemented an end-to-end automated module for managing part-time physicians' contracts, scheduling, and performance tracking. Streamlined workflow operations across multiple branches, reducing manual data entry and processing overhead.</p>
-      </article>
-
-      <!-- Project 3: Conversational AI Doctor Agent -->
-      <article class="project-card">
-        <p class="project-tag">Generative AI · RAG &amp; NLP</p>
-        <h3>Conversational AI Doctor Agent</h3>
-        <p>Built an intelligent, RAG-driven AI agent designed to interact empathetically with patients, address medical inquiries based on verified clinical knowledge bases, and ease patient anxiety with personalized, reliable guidance.</p>
-      </article>
-
-      <!-- Project 4: Emergency Room Triage -->
-      <article class="project-card">
-        <p class="project-tag">Healthcare · Predictive Modeling</p>
-        <h3>Emergency Room Triage &amp; Wait-Time Optimization</h3>
-        <p>Developed a machine learning model to automatically prioritize emergency department patients based on vital signs and symptom severity. Systematically reduces waiting times for critical cases, optimizes resource allocation, and improves overall patient outcomes.</p>
-      </article>
-
-      <!-- Project 5: HR Automation Module -->
-      <article class="project-card">
-        <p class="project-tag">AI Automation · Predictive HR Analytics</p>
-        <h3>End-to-End AI HR Module</h3>
-        <p>Architected an automated HR workflow system powered by intelligent agents. Integrates multiple predictive ML models to benchmark salary scales, forecast employee retention risks, and streamline talent operations into a seamless lifecycle.</p>
-      </article>
-
-      <!-- Project 6: Insurance Approval Cycle Agent (HADAF / KSA) -->
-      <article class="project-card">
-        <p class="project-tag">Enterprise AI · Document Intelligence &amp; Automation</p>
-        <h3>Insurance Approval Cycle Agent (HADAF Platform — KSA)</h3>
-        <p>Engineered an intelligent AI agent integrated with Saudi Arabia's HADAF platform to streamline corporate insurance approval cycles. Automatically fetches, parses, and validates employee verification data across residency records (Iqama), employment contracts, and policy terms to accelerate eligibility approvals.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section wrap reveal contact-section">
-    <div class="section-head">
-      <p class="eyebrow">05 — CONTACT</p>
-      <h2>Let's build something.</h2>
-    </div>
-    <p class="about-copy contact-lede">
-      Open to AI engineering roles, data science collaborations, and teaching opportunities.
-      The fastest way to reach me is through LinkedIn or GitHub.
-    </p>
-    <div class="contact-links">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener">Message on LinkedIn</a>
-      <a class="btn btn-ghost" href="https://github.com/WaledGoba220" target="_blank" rel="noopener">See my GitHub</a>
-      <a class="btn btn-ghost" href="https://www.kaggle.com/waledsaied" target="_blank" rel="noopener">Kaggle</a>
-    </div>
-  </section>
-
-</main>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
