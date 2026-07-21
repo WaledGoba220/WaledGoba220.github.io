@@ -3,365 +3,406 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walid Saeed — AI Engineer & Data Scientist</title>
-  <meta name="description" content="Portfolio of Walid Saeed — AI Engineer, Data Scientist, and AI Instructor." />
+  <title>Waled Saied | Senior Data Scientist & AI Engineer</title>
+  <meta name="description" content="Portfolio of Waled Saied — Senior Data Scientist, AI Engineer, and Instructor specializing in Machine Learning, Generative AI, and Healthcare Analytics." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content="Waled Saied | Senior Data Scientist & AI Engineer" />
+  <meta property="og:description" content="Architecting and deploying production AI systems, healthcare predictive models, and enterprise data solutions." />
+  <meta property="og:type" content="website" />
 
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Background Grid Effect -->
   <div class="grid-backdrop" aria-hidden="true"></div>
 
-  <!-- Header / Navigation -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrap header-row">
-      <a href="#hero" class="brand">Walid Saeed<span class="brand-dot">.</span></a>
-      
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="navMenu">
+      <a class="brand" href="#top">Waled Saied<span class="brand-dot">.</span></a>
+      <nav class="nav" id="nav">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero wrap">
-      
-      <!-- Top Content: Eyebrow, Title & Intro -->
-      <div class="hero-intro">
-        <p class="eyebrow">AI ENGINEER &nbsp;&middot;&nbsp; DATA SCIENTIST &nbsp;&middot;&nbsp; AI INSTRUCTOR</p>
-        <h1>Building intelligent systems with <span class="accent-underline">data & deep learning</span>.</h1>
-        <p class="lede">
-          Data Team Lead & Senior Data Scientist with hands-on experience in machine learning pipelines, enterprise data architecture, and AI instruction.
-        </p>
-        
-        <!-- Social & Quick Links -->
-        <div class="hero-links">
-          <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="mailto:walid@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
-        </div>
-      </div>
+  <main id="top">
 
-      <!-- Media Grid (Photo + Dynamic Graphic) -->
+    <!-- HERO SECTION -->
+    <section class="hero wrap">
       <div class="hero-media">
-        <div class="hero-photo" id="heroPhoto">
-          <img src="profile.jpg" alt="Walid Saeed" id="profileImg" />
-          <div class="hero-photo-fallback" id="photoFallback">
-            <i class="fa-solid fa-user"></i>
-            <p>Add <code>profile.jpg</code> to display photo</p>
-          </div>
+        <div class="hero-photo">
+          <img src="image.jpg" alt="Waled Saied">
+          <div class="hero-photo-fallback"></div>
         </div>
 
         <div class="hero-visual">
-          <canvas id="neuralCanvas" class="neural-canvas"></canvas>
-          
+          <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
           <div class="loss-card">
             <div class="loss-card-head">
               <span class="loss-dot"></span>
-              <span>Model Training Metrics</span>
+              <span>training_log.py</span>
             </div>
-            <svg class="loss-chart" viewBox="0 0 320 140" preserveAspectRatio="none">
-              <line x1="0" y1="30" x2="320" y2="30" class="grid-line" />
-              <line x1="0" y1="70" x2="320" y2="70" class="grid-line" />
-              <line x1="0" y1="110" x2="320" y2="110" class="grid-line" />
-              <path class="loss-path" d="M 10 20 Q 80 110, 160 115 T 310 120" />
-              <path class="acc-path" d="M 10 120 Q 80 40, 160 30 T 310 22" />
+            <svg class="loss-chart" viewBox="0 0 320 160" preserveAspectRatio="none" fill="none">
+              <line x1="0" y1="30" x2="320" y2="30" class="grid-line"/>
+              <line x1="0" y1="70" x2="320" y2="70" class="grid-line"/>
+              <line x1="0" y1="110" x2="320" y2="110" class="grid-line"/>
+              <line x1="0" y1="150" x2="320" y2="150" class="grid-line"/>
+              <path class="loss-path" d="M0,20 C 40,55 60,95 90,105 C 120,115 140,100 170,120 C 200,138 220,128 250,140 C 275,149 300,148 320,150" />
+              <path class="acc-path" d="M0,150 C 40,120 60,90 90,75 C 120,60 140,68 170,45 C 200,28 220,35 250,20 C 275,12 300,14 320,10" />
             </svg>
             <div class="loss-card-legend">
-              <span><span class="dot loss"></span> Loss: 0.042</span>
-              <span><span class="dot acc"></span> Accuracy: 98.6%</span>
+              <span><i class="dot loss"></i> loss ↓ 0.041</span>
+              <span><i class="dot acc"></i> val_acc ↑ 97.8%</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Quick Metrics Bar -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">5+</span>
-          <span class="stat-label">Years Experience</span>
+      <div class="hero-text">
+        <p class="eyebrow">AI ENGINEER &nbsp;·&nbsp; DATA SCIENTIST &nbsp;·&nbsp; AI INSTRUCTOR</p>
+        <h1>Turning raw data into<br>models that <span class="accent-underline">learn</span>.</h1>
+        <p class="lede">I'm Waled Saied. I design and ship production-grade AI systems, enterprise data architectures, and Intelligent Agents — then mentor teams and students to build them too.</p>
+
+        <div class="hero-links">
+          <a href="mailto:waledgoba220@gmail.com"><i class="fa-solid fa-envelope"></i> Email ↗</a>
+          <a href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn ↗</a>
+          <a href="https://github.com/WaledGoba220" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub ↗</a>
+          <a href="https://www.kaggle.com/waledsaied" target="_blank" rel="noopener"><i class="fa-brands fa-kaggle"></i> Kaggle ↗</a>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">20+</span>
-          <span class="stat-label">ML & AI Projects</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">Students Taught</span>
+
+        <!-- QUICK STATS -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">9+</span>
+            <span class="stat-label">Hospital Branches Deployed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Field Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Students Mentored</span>
+          </div>
         </div>
       </div>
-
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section wrap reveal">
       <div class="section-head">
-        <h2>About Me</h2>
+        <p class="eyebrow">01 — ABOUT ME</p>
+        <h2>Building practical AI that survives production.</h2>
       </div>
       <div class="about-grid">
         <p class="about-copy">
-          I am a Data Team Lead and Senior Data Scientist specializing in end-to-end machine learning solutions, enterprise data warehousing, and business intelligence platform development.
+          I'm a Data Scientist and AI Team Lead specializing in Machine Learning, Deep Learning, NLP, Computer Vision, and Generative AI. My core focus is translating complex business problems into scalable, reliable data architecture — spanning predictive healthcare pipelines, computer vision systems, and automated RAG-driven AI agents.
         </p>
         <p class="about-copy">
-          Beyond building predictive models and data architectures, I am passionate about knowledge sharing — mentoring aspiring data professionals through structured courses in machine learning, algorithms, and data analytics.
+          In addition to engineering, I act as a Data Science Instructor. I believe the true value of AI lies in clarity — empowering organizations, junior engineers, and students to build, audit, and trust machine learning systems end-to-end.
         </p>
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- EXPERIENCE SECTION -->
     <section id="experience" class="section wrap reveal">
       <div class="section-head">
-        <h2>Experience</h2>
+        <p class="eyebrow">02 — EXPERIENCE</p>
+        <h2>Where impact meets execution.</h2>
       </div>
+
       <div class="exp-grid">
         <article class="exp-card">
           <div class="exp-card-top">
-            <h3>Data Team Lead & Sr. Data Scientist</h3>
-            <span class="exp-date">2023 — Present</span>
+            <h3>Megamind IT Solutions</h3>
+            <span class="exp-date">2024 — Present</span>
           </div>
-          <p class="exp-role">Megamind</p>
-          <p class="exp-desc">
-            Leading a multi-disciplinary data team, driving ETL pipeline design, machine learning integration, and scalable data warehouse architecture.
-          </p>
+          <p class="exp-role">Data Scientist & Team Lead</p>
+          <p class="exp-desc">Architecting and deploying end-to-end ML pipelines & BI analytics across 9+ hospital branches, optimizing clinical triage, part-time doctor workflows, and executive reporting.</p>
         </article>
 
         <article class="exp-card">
           <div class="exp-card-top">
-            <h3>AI & Data Science Instructor</h3>
-            <span class="exp-date">2022 — Present</span>
+            <h3>IT Sharks</h3>
+            <span class="exp-date">2025 — Present</span>
           </div>
-          <p class="exp-role">Academy / Professional Training</p>
-          <p class="exp-desc">
-            Designing and delivering hands-on curriculum covering ML algorithms, Python data stack, SQL Server, and deep learning fundamentals.
-          </p>
+          <p class="exp-role">Data Science Instructor</p>
+          <p class="exp-desc">Designing and leading hands-on curricula in Data Science, Machine Learning models, and Statistical Foundations for emerging data professionals.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Instant Software Solutions</h3>
+            <span class="exp-date">2025 — Present</span>
+          </div>
+          <p class="exp-role">Data Science Instructor</p>
+          <p class="exp-desc">Mentoring cohorts through practical machine learning deployments, Python data stack best practices, and exploratory data analysis.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Key2Soft</h3>
+            <span class="exp-date">2023 — 2024</span>
+          </div>
+          <p class="exp-role">Data Analyst</p>
+          <p class="exp-desc">Engineered real-time transactional dashboards and anomaly/fraud detection pipelines handling high-volume operational metrics.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>GOBA</h3>
+            <span class="exp-date">2022 — 2023</span>
+          </div>
+          <p class="exp-role">Data Scientist · Founder</p>
+          <p class="exp-desc">Developed award-winning Computer Vision and Deep Learning models for medical diagnostics automation, taking 1st place at Techne Drifts.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card-top">
+            <h3>Mafhoum</h3>
+            <span class="exp-date">2022 — 2023</span>
+          </div>
+          <p class="exp-role">Data Scientist</p>
+          <p class="exp-desc">Streamlined operational supply-chain intelligence through automated predictive modeling and inventory data analytics.</p>
         </article>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section wrap reveal">
       <div class="section-head">
-        <h2>Technical Skills</h2>
+        <p class="eyebrow">03 — TECH STACK</p>
+        <h2>Languages, Frameworks & Architecture.</h2>
       </div>
+
       <div class="skills-grid">
-        
         <div class="skill-group">
-          <h3><i class="fa-solid fa-brain"></i> Machine Learning & AI</h3>
+          <h3><i class="fa-solid fa-code"></i> Core Languages</h3>
           <ul class="tag-list">
-            <li>Scikit-Learn</li>
-            <li>XGBoost</li>
-            <li>Keras</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-solid fa-database"></i> SQL</li>
+            <li><i class="fa-solid fa-chart-simple"></i> R</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-brain"></i> ML & Deep Learning</h3>
+          <ul class="tag-list">
             <li>TensorFlow</li>
-            <li>SVM / Random Forest</li>
+            <li>PyTorch</li>
+            <li>Keras</li>
+            <li>scikit-learn</li>
+            <li>XGBoost</li>
+            <li>SciPy</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3><i class="fa-solid fa-database"></i> Data & Architecture</h3>
+          <h3><i class="fa-solid fa-network-wired"></i> Neural Architectures</h3>
           <ul class="tag-list">
-            <li>SQL Server</li>
-            <li>ETL Pipelines</li>
-            <li>Star / Snowflake Schema</li>
-            <li>Medallion Architecture</li>
-            <li>SSAS / SSRS</li>
+            <li>CNNs</li>
+            <li>RNNs & LSTMs</li>
+            <li>Transformers</li>
+            <li>RAG & LLM Agents</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3><i class="fa-solid fa-code"></i> Tools & Deployment</h3>
+          <h3><i class="fa-solid fa-server"></i> Data & BI Architecture</h3>
           <ul class="tag-list">
-            <li>Python (Pandas/NumPy)</li>
+            <li>SQL Server (SSAS/SSRS)</li>
+            <li>Medallion & Star Schema</li>
             <li>Power BI</li>
             <li>Streamlit</li>
-            <li>Git</li>
+            <li>ETL Pipelines</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-square-poll-vertical"></i> Analytics & Math</h3>
+          <ul class="tag-list">
+            <li>Pandas & NumPy</li>
+            <li>Matplotlib & Seaborn</li>
+            <li>Inferential Statistics</li>
+            <li>Linear Algebra</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-globe"></i> Scraping & Automation</h3>
+          <ul class="tag-list">
+            <li>BeautifulSoup</li>
+            <li>Selenium</li>
             <li>REST APIs</li>
           </ul>
         </div>
-
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section wrap reveal">
       <div class="section-head">
-        <h2>Featured Projects</h2>
+        <p class="eyebrow">04 — PROJECTS</p>
+        <h2>Featured work & Intelligent Agents.</h2>
       </div>
+
       <div class="project-grid">
-
+        
+        <!-- Project 1 -->
         <article class="project-card">
           <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-square-poll-vertical"></i> Business Intelligence</span>
-            <span class="project-year">2025</span>
+            <span class="project-tag"><i class="fa-solid fa-trophy"></i> Award Winning · CV</span>
+            <span class="project-year">Graduation</span>
           </div>
-          <h3>Intelligent Business Management Platform</h3>
-          <p>End-to-end analytics platform with real-time dashboards and automated ETL workflows.</p>
+          <h3>GOBA — Chest Diagnostics Platform</h3>
+          <p>AI computer vision system identifying complex lung conditions from X-ray imaging. Awarded 1st place at Techne Drifts and selected as a Top-18 Startup at Techne Summit Cairo 2023.</p>
           <div class="project-tech">
-            <span>Power BI</span><span class="sep">|</span><span>SQL Server</span><span class="sep">|</span><span>Python</span>
+            <span>Python</span> <span class="sep">|</span>
+            <span>PyTorch</span> <span class="sep">|</span>
+            <span>OpenCV</span> <span class="sep">|</span>
+            <span>CNN</span> <span class="sep">|</span>
+            <span>Streamlit</span>
           </div>
         </article>
 
+        <!-- Project 2 -->
         <article class="project-card">
           <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-hospital"></i> Healthcare AI</span>
-            <span class="project-year">2025</span>
+            <span class="project-tag"><i class="fa-solid fa-hospital"></i> Healthcare · Automation</span>
+            <span class="project-year">Enterprise</span>
           </div>
-          <h3>Multi-Branch Healthcare Data Warehouse</h3>
-          <p>Medallion architecture pipeline integrating multi-branch hospital system records.</p>
+          <h3>Automated Part-Time Doctor Module</h3>
+          <p>End-to-end module managing physician contracts, scheduling, and dynamic KPI performance tracking. Successfully scaled and deployed across 9+ medical branches.</p>
           <div class="project-tech">
-            <span>SQL Server</span><span class="sep">|</span><span>SSAS</span><span class="sep">|</span><span>Python</span>
+            <span>SQL Server</span> <span class="sep">|</span>
+            <span>Power BI</span> <span class="sep">|</span>
+            <span>Python</span> <span class="sep">|</span>
+            <span>ETL</span>
           </div>
         </article>
 
+        <!-- Project 3 -->
         <article class="project-card">
           <div class="project-card-header">
-            <span class="project-tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
-            <span class="project-year">2024</span>
+            <span class="project-tag"><i class="fa-solid fa-robot"></i> Generative AI · RAG</span>
+            <span class="project-year">GenAI</span>
           </div>
-          <h3>Predictive Analytics & Model Pipeline</h3>
-          <p>Supervised learning models for churn prediction and customer segmentation.</p>
+          <h3>Conversational AI Doctor Agent</h3>
+          <p>Intelligent, empathetic AI agent driven by Retrieval-Augmented Generation (RAG). Interacts with patients using verified clinical knowledge bases to address medical inquiries.</p>
           <div class="project-tech">
-            <span>Scikit-Learn</span><span class="sep">|</span><span>XGBoost</span><span class="sep">|</span><span>Streamlit</span>
+            <span>LLMs</span> <span class="sep">|</span>
+            <span>RAG</span> <span class="sep">|</span>
+            <span>LangChain</span> <span class="sep">|</span>
+            <span>Python</span> <span class="sep">|</span>
+            <span>Vector DB</span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-heart-pulse"></i> Predictive Analytics</span>
+            <span class="project-year">Healthcare</span>
+          </div>
+          <h3>Emergency Room Triage Optimization</h3>
+          <p>Predictive machine learning pipeline calculating real-time patient risk scores based on vital signs and symptom acuity to prioritize emergency resources.</p>
+          <div class="project-tech">
+            <span>Scikit-Learn</span> <span class="sep">|</span>
+            <span>XGBoost</span> <span class="sep">|</span>
+            <span>Pandas</span> <span class="sep">|</span>
+            <span>Flask</span>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-users-gear"></i> AI HR Analytics</span>
+            <span class="project-year">Enterprise</span>
+          </div>
+          <h3>End-to-End AI HR & Retention Module</h3>
+          <p>Automated HR workflow system leveraging ML algorithms to benchmark salary scales, forecast turnover risk, and optimize talent management lifecycle.</p>
+          <div class="project-tech">
+            <span>Python</span> <span class="sep">|</span>
+            <span>Random Forest</span> <span class="sep">|</span>
+            <span>Power BI</span> <span class="sep">|</span>
+            <span>SQL</span>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag"><i class="fa-solid fa-shield-halved"></i> Document Intelligence</span>
+            <span class="project-year">KSA HADAF</span>
+          </div>
+          <h3>Insurance Approval Cycle Agent</h3>
+          <p>Autonomous AI agent integrated with Saudi Arabia's HADAF platform. Parses, verifies, and validates Iqama records, employment contracts, and policies for instant approval.</p>
+          <div class="project-tech">
+            <span>OCR</span> <span class="sep">|</span>
+            <span>NLP</span> <span class="sep">|</span>
+            <span>APIs</span> <span class="sep">|</span>
+            <span>Python Automation</span>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section wrap reveal contact-section">
       <div class="section-head">
-        <h2>Get In Touch</h2>
+        <p class="eyebrow">05 — CONTACT</p>
+        <h2>Let's build something.</h2>
       </div>
-      <p class="contact-lede lede">
-        Open for technical consultations, training sessions, and AI engineering opportunities. Feel free to reach out directly:
+      <p class="about-copy contact-lede">
+        Open to AI Engineering initiatives, Enterprise Data Consulting, and Academic/Training collaborations. Connect directly via any of the channels below:
       </p>
 
       <div class="contact-links-list">
-        <a href="mailto:walid@example.com" class="btn btn-ghost contact-btn">
-          <i class="fa-solid fa-envelope"></i>
-          <span>walid@example.com</span>
+        <a class="btn btn-ghost contact-btn" href="mailto:waledgoba220@gmail.com">
+          <i class="fa-solid fa-envelope"></i> <span>waledgoba220@gmail.com</span>
         </a>
-        <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn btn-ghost contact-btn">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>Chat on WhatsApp</span>
+        <a class="btn btn-ghost contact-btn" href="https://wa.me/201113506145" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp (+20 111 350 6145)</span>
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-ghost contact-btn">
-          <i class="fa-brands fa-linkedin"></i>
-          <span>LinkedIn Profile</span>
+        <a class="btn btn-ghost contact-btn" href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> <span>LinkedIn Profile</span>
+        </a>
+        <a class="btn btn-ghost contact-btn" href="https://github.com/WaledGoba220" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> <span>GitHub Repositories</span>
+        </a>
+        <a class="btn btn-ghost contact-btn" href="https://www.kaggle.com/waledsaied" target="_blank" rel="noopener">
+          <i class="fa-brands fa-kaggle"></i> <span>Kaggle Profile</span>
         </a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; 2026 Walid Saeed. Built with clean code & modern web standards.</p>
-    </div>
+  <footer class="site-footer wrap">
+    <p>© 2026 Waled Saied. Designed & Built with Precision.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Mobile Nav Toggle
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('is-open');
-    });
-
-    // Handle Profile Image Fallback
-    const profileImg = document.getElementById('profileImg');
-    const heroPhoto = document.getElementById('heroPhoto');
-    profileImg.onerror = () => {
-      heroPhoto.classList.add('img-fallback');
-    };
-
-    // Scroll Reveal Animation
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    reveals.forEach(el => observer.observe(el));
-
-    // Simple Background Neural Canvas Animation
-    const canvas = document.getElementById('neuralCanvas');
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      let width = canvas.width = canvas.offsetWidth;
-      let height = canvas.height = canvas.offsetHeight;
-
-      window.addEventListener('resize', () => {
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
-      });
-
-      const nodes = Array.from({ length: 18 }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-      }));
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-        
-        nodes.forEach(node => {
-          node.x += node.vx;
-          node.y += node.vy;
-          if (node.x < 0 || node.x > width) node.vx *= -1;
-          if (node.y < 0 || node.y > height) node.vy *= -1;
-
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(52, 84, 209, 0.25)';
-          ctx.fill();
-        });
-
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 90) {
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.strokeStyle = `rgba(52, 84, 209, ${0.12 * (1 - dist / 90)})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
