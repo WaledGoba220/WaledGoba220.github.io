@@ -8,10 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -185,7 +181,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- SKILLS WITH SVG ICONS -->
   <section id="skills" class="section wrap reveal">
     <div class="section-head">
       <p class="eyebrow">03 — SKILLS</p>
@@ -194,7 +190,10 @@
 
     <div class="skills-grid">
       <div class="skill-group">
-        <h3><i class="fa-solid fa-code skill-icon"></i> Languages</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Languages
+        </h3>
         <ul class="tag-list">
           <li>Python</li>
           <li>SQL</li>
@@ -203,7 +202,10 @@
       </div>
 
       <div class="skill-group">
-        <h3><i class="fa-solid fa-brain skill-icon"></i> ML &amp; Deep Learning</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+          ML &amp; Deep Learning
+        </h3>
         <ul class="tag-list">
           <li>TensorFlow</li>
           <li>PyTorch</li>
@@ -214,7 +216,10 @@
       </div>
 
       <div class="skill-group">
-        <h3><i class="fa-solid fa-network-wired skill-icon"></i> Neural Networks</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="8" height="8" rx="2"></rect><rect x="14" y="2" width="8" height="8" rx="2"></rect><rect x="8" y="14" width="8" height="8" rx="2"></rect><line x1="6" y1="10" x2="12" y2="14"></line><line x1="18" y1="10" x2="12" y2="14"></line></svg>
+          Neural Networks
+        </h3>
         <ul class="tag-list">
           <li>CNN</li>
           <li>RNN / LSTM</li>
@@ -224,7 +229,10 @@
       </div>
 
       <div class="skill-group">
-        <h3><i class="fa-solid fa-chart-line skill-icon"></i> Data Analysis &amp; Viz</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Data Analysis &amp; Viz
+        </h3>
         <ul class="tag-list">
           <li>Power BI</li>
           <li>Pandas</li>
@@ -236,7 +244,10 @@
       </div>
 
       <div class="skill-group">
-        <h3><i class="fa-solid fa-square-root-variable skill-icon"></i> Foundations</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Foundations
+        </h3>
         <ul class="tag-list">
           <li>Statistics</li>
           <li>Probability</li>
@@ -246,7 +257,10 @@
       </div>
 
       <div class="skill-group">
-        <h3><i class="fa-solid fa-spider skill-icon"></i> Web Scraping</h3>
+        <h3>
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Web Scraping
+        </h3>
         <ul class="tag-list">
           <li>BeautifulSoup</li>
           <li>Selenium</li>
@@ -307,7 +321,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT WITH SVG ICONS & DIRECT LINKS -->
   <section id="contact" class="section wrap reveal contact-section">
     <div class="section-head">
       <p class="eyebrow">05 — CONTACT</p>
@@ -319,20 +333,34 @@
     </p>
     
     <div class="contact-links">
+      <!-- Gmail Link -->
       <a class="btn btn-ghost contact-btn" href="mailto:waledelsamra@gmail.com" title="Send Email">
-        <i class="fa-solid fa-envelope"></i> Gmail
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Gmail
       </a>
+
+      <!-- WhatsApp Link -->
       <a class="btn btn-ghost contact-btn" href="https://wa.me/201113506145" target="_blank" rel="noopener" title="WhatsApp Chat">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        WhatsApp
       </a>
+
+      <!-- LinkedIn Link -->
       <a class="btn btn-ghost contact-btn" href="https://www.linkedin.com/in/waled-saied-870b68201/" target="_blank" rel="noopener" title="LinkedIn Profile">
-        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        LinkedIn
       </a>
+
+      <!-- GitHub Link -->
       <a class="btn btn-ghost contact-btn" href="https://github.com/WaledGoba220" target="_blank" rel="noopener" title="GitHub Profile">
-        <i class="fa-brands fa-github"></i> GitHub
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        GitHub
       </a>
+
+      <!-- Kaggle Link -->
       <a class="btn btn-ghost contact-btn" href="https://www.kaggle.com/waledsaied" target="_blank" rel="noopener" title="Kaggle Profile">
-        <i class="fa-brands fa-kaggle"></i> Kaggle
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20l-6-8 6-8M6 4v16M12 12H6"></path></svg>
+        Kaggle
       </a>
     </div>
   </section>
