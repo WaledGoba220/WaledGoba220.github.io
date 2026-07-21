@@ -305,8 +305,13 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 
 /* Skills */
 .skills-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:32px; }
-.skill-group h3{ font-size:1.02rem; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
-.skill-icon{ color: var(--accent); font-size:0.95rem; }
+.skill-group h3{ font-size:1.02rem; margin-bottom:16px; display:flex; align-items:center; gap:10px; }
+.skill-icon{ 
+  width: 20px; 
+  height: 20px; 
+  color: var(--accent); 
+  flex-shrink: 0;
+}
 .tag-list{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
 .tag-list li{
   font-family: var(--font-mono); font-size:0.82rem;
@@ -345,12 +350,19 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 .contact-btn{
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 12px 20px;
   font-size: 0.9rem;
 }
-.contact-btn i{
-  font-size: 1.1rem;
+.contact-icon{
+  width: 18px;
+  height: 18px;
+  color: var(--ink);
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+.contact-btn:hover .contact-icon{
+  color: var(--accent);
 }
 
 /* ---------- Responsive ---------- */
