@@ -53,8 +53,6 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
   opacity: 0.5;
 }
 
-
-
 /* ---------- Header ---------- */
 .site-header{
   position: sticky; top:0; z-index:50;
@@ -129,14 +127,6 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
   border-radius: calc(var(--radius) - 1px);
   margin: -1px;
 }
-.hero-photo-fallback svg{ width:44px; height:44px; color: var(--accent); }
-.hero-photo-fallback p{
-  margin:0; font-size:0.85rem; color: var(--ink-soft); line-height:1.5;
-}
-.hero-photo-fallback code{
-  font-family: var(--font-mono); font-size:0.82rem; color: var(--accent);
-  background: var(--accent-soft); padding:2px 6px; border-radius:5px;
-}
 .hero-photo.img-fallback img{ display:none; }
 .hero-photo.img-fallback .hero-photo-fallback{ display:flex; }
 
@@ -176,22 +166,44 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:13px 24px; border-radius:999px; font-weight:600; font-size:0.92rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 .btn-primary{
   background: var(--ink); color:#fff;
 }
 .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(18,20,28,0.18); }
 .btn-ghost{
-  border:1px solid var(--line); color: var(--ink);
+  border:1px solid var(--line); color: var(--ink); background: var(--bg);
 }
 .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-.hero-links{ display:flex; gap:22px; }
-.hero-links a{
-  font-family: var(--font-mono); font-size:0.85rem; color: var(--ink-soft);
-  border-bottom:1px solid transparent;
+
+/* Stats Grid in Hero */
+.hero-stats{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
 }
-.hero-links a:hover{ color: var(--accent); border-color: var(--accent); }
+.stat-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-num{
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-label{
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.3;
+}
 
 /* ---------- Hero visual: loss card ---------- */
 .hero-visual{ position:relative; height:100%; z-index:1; }
@@ -293,7 +305,8 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 
 /* Skills */
 .skills-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:32px; }
-.skill-group h3{ font-size:1.02rem; margin-bottom:16px; }
+.skill-group h3{ font-size:1.02rem; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.skill-icon{ color: var(--accent); font-size:0.95rem; }
 .tag-list{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
 .tag-list li{
   font-family: var(--font-mono); font-size:0.82rem;
@@ -319,13 +332,26 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
 }
 .project-card h3{ font-size:1.15rem; }
 .project-card p{ color: var(--ink-soft); font-size:0.95rem; margin:0; flex-grow:1; }
-.project-link{ font-family: var(--font-mono); font-size:0.85rem; color: var(--ink); font-weight:500; margin-top:6px; }
-.project-link:hover{ color: var(--accent); }
 
 /* Contact */
 .contact-section{ text-align:left; }
 .contact-lede{ margin-bottom:32px; }
-.contact-links{ display:flex; gap:14px; flex-wrap:wrap; }
+.contact-links{ 
+  display:flex; 
+  gap:12px; 
+  flex-wrap:wrap; 
+  align-items:center; 
+}
+.contact-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+}
+.contact-btn i{
+  font-size: 1.1rem;
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px){
@@ -350,6 +376,9 @@ h1,h2,h3{ font-family: var(--font-display); font-weight:600; margin:0; letter-sp
   .nav-toggle{ display:flex; }
   .skills-grid{ grid-template-columns:1fr; }
   .header-row{ height:64px; }
+  .hero-stats{ grid-template-columns: 1fr 1fr; }
+  .contact-links{ flex-direction: column; align-items: stretch; }
+  .contact-btn{ justify-content: center; }
 }
 
 /* Focus visibility */
