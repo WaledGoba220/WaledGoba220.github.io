@@ -161,3 +161,147 @@ if ('IntersectionObserver' in window && revealEls.length) {
 } else {
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
+
+/* =====================================================================
+   v2 — interactions & animations
+   ===================================================================== */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(pointer: fine)').matches;
+
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Typed rotating roles in the hero eyebrow
+(function typedRoles() {
+  const el = document.getElementById('typedRole');
+  if (!el) return;
+  const roles = ['Data Team Lead', 'Head of AI & Data Tracks', 'Data Scientist', 'AI Engineer', 'AI Instructor'];
+  if (reduceMotion) { el.textContent = roles.slice(0, 3).join(' · '); return; }
+  let r = 0, i = roles[0].length, deleting = true;
+  function tick() {
+    const word = roles[r];
+    if (deleting) {
+      i--;
+      if (i <= 0) { deleting = false; r = (r + 1) % roles.length; }
+    } else {
+      i++;
+    }
+    el.textContent = roles[r].slice(0, Math.max(i, 0));
+    let delay = deleting ? 35 : 70;
+    if (!deleting && i >= roles[r].length) { deleting = true; delay = 1800; }
+    if (deleting && i === 0) delay = 300;
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 2200);
+})();
+
+// Count-up numbers (start when visible)
+(function countUp() {
+  const counters = document.querySelectorAll('.count');
+  if (!counters.length) return;
+  const run = (el) => {
+    const target = parseInt(el.dataset.target, 10) || 0;
+    if (reduceMotion) { el.textContent = target; return; }
+    const duration = 1400 + Math.min(target, 200) * 3;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const frame = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(ease(t) * target);
+      if (t < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+  if (!('IntersectionObserver' in window)) { counters.forEach(run); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  counters.forEach((c) => io.observe(c));
+})();
+
+// Reveal individual timeline/education items
+(function revealItems() {
+  const items = document.querySelectorAll('.reveal-item');
+  if (!('IntersectionObserver' in window)) { items.forEach((el) => el.classList.add('is-visible')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  items.forEach((el) => io.observe(el));
+})();
+
+// Scroll progress bar, timeline fill and active nav link
+(function scrollEffects() {
+  const bar = document.getElementById('scrollProgress');
+  const fill = document.getElementById('timelineFill');
+  const timeline = document.querySelector('.timeline');
+  const links = [...document.querySelectorAll('.nav a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  let ticking = false;
+
+  function update() {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    const p = max > 0 ? window.scrollY / max : 0;
+    if (bar) bar.style.transform = `scaleX(${p})`;
+
+    if (fill && timeline) {
+      const r = timeline.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const prog = Math.min(Math.max((vh * 0.75 - r.top) / r.height, 0), 1);
+      fill.style.transform = `scaleY(${prog})`;
+    }
+
+    let current = null;
+    sections.forEach((s) => { if (s.getBoundingClientRect().top <= 120) current = s.id; });
+    links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === '#' + current));
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// Epoch counter on the training card
+(function epochs() {
+  const el = document.getElementById('epochCounter');
+  if (!el || reduceMotion) { if (el) el.textContent = 'epoch 50/50'; return; }
+  let e = 1;
+  const id = setInterval(() => {
+    e++;
+    el.textContent = `epoch ${String(e).padStart(2, '0')}/50`;
+    if (e >= 50) clearInterval(id);
+  }, 55);
+})();
+
+// Desktop-only pointer effects: tilt cards, magnetic buttons, cursor glow
+if (finePointer && !reduceMotion) {
+  document.body.classList.add('has-pointer');
+
+  const glow = document.getElementById('cursorGlow');
+  window.addEventListener('mousemove', (e) => {
+    if (glow) glow.style.transform = `translate(${e.clientX - 210}px, ${e.clientY - 210}px)`;
+  }, { passive: true });
+
+  document.querySelectorAll('.tilt').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      card.style.transform = `perspective(900px) rotateX(${(0.5 - y) * 6}deg) rotateY(${(x - 0.5) * 8}deg) translateY(-4px)`;
+      card.style.setProperty('--mx', `${x * 100}%`);
+      card.style.setProperty('--my', `${y * 100}%`);
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
+  document.querySelectorAll('.magnetic').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - (r.left + r.width / 2);
+      const y = e.clientY - (r.top + r.height / 2);
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
